@@ -8,7 +8,10 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "paths": {
+      "@support/*": ["./Phase2-Playwright/support/*"]
+    }
   },
   "include": ["**/*.ts"],
   "exclude": ["node_modules", ".solutions-check"]

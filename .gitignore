@@ -4,3 +4,7 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /.solutions-check/
+
+# Saved logins and local settings (passwords), never commit
+.auth/
+.env

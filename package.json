@@ -6,7 +6,10 @@
   "type": "commonjs",
   "scripts": {
     "phase1": "playwright test --project=phase1",
+    "phase2": "playwright test Phase2-Playwright",
+    "report": "playwright show-report",
     "typecheck": "tsc --noEmit",
+    "lint": "eslint Phase2-Playwright",
     "format": "prettier --write .",
     "check:solutions": "node scripts/check-solutions.mjs"
   },
