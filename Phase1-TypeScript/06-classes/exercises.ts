@@ -5,11 +5,11 @@
 //    and a label() method returning e.g. 'Sam Jones <sam@example.com>'.
 export class Customer {
   constructor(name: string, email: string) {
-    throw new Error('TODO: write the Customer class');
+    // TODO: write your code here
   }
 
   label(): string {
-    throw new Error('TODO: write label');
+    // TODO: write your code here
   }
 }
 
@@ -19,15 +19,15 @@ export class Customer {
 //    - isEmpty() returns true when there are no lines
 export class Basket {
   add(product: string, quantity: number): void {
-    throw new Error('TODO: write add');
+    // TODO: write your code here
   }
 
   get count(): number {
-    throw new Error('TODO: write count');
+    // TODO: write your code here
   }
 
   isEmpty(): boolean {
-    throw new Error('TODO: write isEmpty');
+    // TODO: write your code here
   }
 }
 
@@ -64,10 +64,10 @@ export class FakePage {
 //    - async login(email, password) fills the email, then the password, then clicks Sign In.
 export class LoginPage {
   constructor(page: FakePage) {
-    throw new Error('TODO: write the LoginPage constructor');
+    // TODO: write your code here
   }
 
   async login(email: string, password: string): Promise<void> {
-    throw new Error('TODO: write login');
+    // TODO: write your code here
   }
 }

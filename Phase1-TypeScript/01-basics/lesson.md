@@ -75,8 +75,10 @@ test('Login with valid credentials', async () => { ... });
 
 ## Now do the exercises
 
-Open `exercises.ts`, replace each `throw new Error('TODO ...')` with your code, and run:
+Open `exercises.ts`, write your code where it says `// TODO: write your code here`, and run:
 
 ```
 npx playwright test 01
 ```
+
+You'll notice a red underline on each function you haven't written yet. That's TypeScript pointing out that the function promises to return something (for example `: string`) but doesn't yet. It disappears as soon as you write the function.

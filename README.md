@@ -38,7 +38,7 @@ There are seven topics, each in its own folder under [Phase1-TypeScript/](Phase1
 For each topic:
 
 1. **Read** `lesson.md`.
-2. **Open** `exercises.ts` and replace each `throw new Error('TODO ...')` with your code.
+2. **Open** `exercises.ts` and write your code wherever it says `// TODO: write your code here`.
 3. **Run** that topic's tests, for example `npx playwright test 01`, until they're all green. You can also click the ▶ buttons in VS Code's **Testing** panel (the flask icon).
 4. **Run** `npm run typecheck`. Topic 04 onwards has some checks that only typecheck catches.
 5. **Compare** your answers with [Phase1-TypeScript/solutions/](Phase1-TypeScript/solutions/). There's usually more than one right answer, so if yours works and reads clearly, it's fine.
@@ -54,17 +54,17 @@ Don't edit the `.spec.ts` files. They're the "answer checker".
 
     Error: expect(received).toBe(expected)
 
-    Expected: "https://dev.example.com/orders/42"
-    Received: "https://dev.example.com/orders42"
+    Expected: "https://shop.example.com/orders/42"
+    Received: "https://shop.example.com/orders42"
 ```
 
 **Expected** is what the test wanted, and **Received** is what your code gave. Here the `/` before the id is missing. Underneath the error there's a file and line number pointing at the failing check. Get used to reading these, because Playwright failures in Phase 2 look exactly the same.
 
-If you see `Error: TODO: write orderUrl`, you just haven't done that exercise yet.
+If you see `Received: undefined`, you most likely haven't written that function yet, or you forgot to `return` the answer.
 
-### Typecheck errors at the start are normal
+### Red underlines and typecheck errors at the start are normal
 
-Before you start, `npm run typecheck` reports a handful of errors in topics 04, 06 and 07. Those exercises deliberately start broken, and each error goes away when you finish that exercise. When all seven topics are done, typecheck should report nothing.
+Every function you haven't written yet has a red underline in VS Code, and `npm run typecheck` lists them all. That's because each function promises to return something (for example `: string`) but doesn't yet. A few exercises in topics 04, 06 and 07 also start deliberately broken. Every one of these errors disappears as you finish the exercises. When all seven topics are done, typecheck should report nothing.
 
 ## When you're stuck
 

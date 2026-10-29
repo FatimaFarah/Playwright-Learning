@@ -1,4 +1,4 @@
-// 05 — async and await. Replace each `throw new Error('TODO ...')`, and fix the two bugs.
+// 05 — async and await. Fill in each function marked TODO, and fix the two bugs.
 // Run: npx playwright test 05
 
 // ---- Given — don't change this section. It pretends to be a slow website. ----
@@ -37,7 +37,7 @@ export class FakeBasket {
 
 // 1. Load the customer name and return it in capitals, e.g. 'SAM JONES'.
 export async function shoutCustomerName(): Promise<string> {
-  throw new Error('TODO: write shoutCustomerName');
+  // TODO: write your code here
 }
 
 // 2. Add `first` to the basket, THEN `second`, waiting for each.
@@ -46,7 +46,7 @@ export async function addTwoItems(
   first: string,
   second: string
 ): Promise<void> {
-  throw new Error('TODO: write addTwoItems');
+  // TODO: write your code here
 }
 
 // 3. FIND THE BUG: this should submit the basket and return its status, 'submitted'.
@@ -58,7 +58,7 @@ export async function placeOrder(basket: FakeBasket): Promise<string> {
 // 4. Load the customer name and the order count AT THE SAME TIME, and return
 //    e.g. 'Sam Jones has 3 orders'. Hint: Promise.all
 export async function customerSummary(): Promise<string> {
-  throw new Error('TODO: write customerSummary');
+  // TODO: write your code here
 }
 
 // 5. FIND THE BUG: this should add every item, in order, before returning.
