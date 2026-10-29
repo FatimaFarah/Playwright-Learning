@@ -1,0 +1,25 @@
+{
+  "name": "playwright-learning",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Learning path for QA automation: TypeScript first, then Playwright.",
+  "type": "commonjs",
+  "scripts": {
+    "phase1": "playwright test --project=phase1",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "check:solutions": "node scripts/check-solutions.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.6",
+    "dotenv": "^17.4.2",
+    "eslint": "^10.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-playwright": "^2.12.1",
+    "prettier": "^3.9.10",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.1"
+  }
+}
