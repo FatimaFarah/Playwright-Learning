@@ -20,8 +20,8 @@ class Customer {
   }
 }
 
-const acme = new Customer('Acme', 'orders@acme.test'); // `new` builds an object from the blueprint
-acme.label(); // 'Acme <orders@acme.test>'
+const sam = new Customer('Sam Jones', 'sam@example.com'); // `new` builds an object from the blueprint
+sam.label(); // 'Sam Jones <sam@example.com>'
 ```
 
 ## private: hide the details

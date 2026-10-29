@@ -5,8 +5,8 @@
 ## Values and variables
 
 ```ts
-const product = 'Diesel'; // a string (text)
-const litres = 5000; // a number
+const product = 'Backpack'; // a string (text)
+const quantity = 3; // a number
 const paid = true; // a boolean (true or false)
 
 let attempts = 0; // let = this variable can change later
@@ -22,9 +22,9 @@ You'll also see things like `: string` after a name, for example `function greet
 Backticks (`` ` ``) let you put values inside a string with `${...}`:
 
 ```ts
-const baseUrl = 'https://dev.example.com';
-const orderId = 42;
-const url = `${baseUrl}/orders/${orderId}`; // 'https://dev.example.com/orders/42'
+const baseUrl = 'https://shop.example.com';
+const productId = 42;
+const url = `${baseUrl}/products/${productId}`; // 'https://shop.example.com/products/42'
 ```
 
 You'll use this all the time for URLs and test titles. Some handy string methods:
@@ -39,10 +39,10 @@ You'll use this all the time for URLs and test titles. Some handy string methods
 ## Comparing values
 
 ```ts
-litres === 5000; // equal
-litres !== 0; // not equal
-litres >= 1000; // greater than or equal
-paid && litres > 0; // AND: both must be true
+quantity === 3; // equal
+quantity !== 0; // not equal
+quantity >= 10; // greater than or equal
+paid && quantity > 0; // AND: both must be true
 !paid; // NOT: flips true/false
 ```
 
@@ -51,12 +51,12 @@ Always use `===` and `!==`, never `==` or `!=`. The two-character versions conve
 ## Making decisions
 
 ```ts
-if (litres === 0) {
-  return 'Nothing to deliver';
-} else if (litres < 1000) {
-  return 'Small delivery';
+if (stock === 0) {
+  return 'Out of stock';
+} else if (stock < 5) {
+  return 'Only a few left';
 } else {
-  return 'Bulk delivery';
+  return 'In stock';
 }
 ```
 
@@ -69,7 +69,7 @@ const label = paid ? 'Paid' : 'Unpaid';
 ## Where you'll see this in Playwright
 
 ```ts
-await page.goto(`${BASE_URL}/orders`);
+await page.goto(`${BASE_URL}/products`);
 test('Login with valid credentials', async () => { ... });
 ```
 

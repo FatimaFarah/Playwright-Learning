@@ -6,7 +6,7 @@ export function wait(ms: number): Promise<void> {
 
 export async function loadCustomerName(): Promise<string> {
   await wait(20);
-  return 'Acme Fuels';
+  return 'Sam Jones';
 }
 
 export async function loadOrderCount(): Promise<number> {

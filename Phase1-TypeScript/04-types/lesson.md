@@ -5,10 +5,10 @@ TypeScript is JavaScript with **types** added. Types don't change what your code
 ## Annotations and inference
 
 ```ts
-const litres: number = 500; // annotation: you say what the type is
-const product = 'Diesel'; // inference: TypeScript works out it's a string
+const quantity: number = 3; // annotation: you say what the type is
+const product = 'Backpack'; // inference: TypeScript works out it's a string
 
-function isLarge(litres: number): boolean { ... } // parameter type, then return type
+function isBulk(quantity: number): boolean { ... } // parameter type, then return type
 ```
 
 You must annotate function parameters. For most variables you can let TypeScript infer the type.
@@ -34,11 +34,11 @@ Either works for describing an object, and you'll see both in real test suites.
 ## Union types: "one of these"
 
 ```ts
-type Product = 'ordering' | 'routing' | 'reporting'; // only these three strings are allowed
+type Product = 'books' | 'games' | 'music'; // only these three strings are allowed
 let id: number | undefined; // a number, or nothing yet
 ```
 
-Union types catch typos. `const p: Product = 'orderign'` is an error straight away, rather than a confusing test failure later.
+Union types catch typos. `const p: Product = 'boks'` is an error straight away, rather than a confusing test failure later.
 
 If something might be `undefined`, check before you use it, or give it a fallback with `??`:
 
@@ -50,10 +50,10 @@ const name = user.displayName ?? user.username; // use username if displayName i
 
 ```ts
 switch (product) {
-  case 'ordering':
-    return 'Online Ordering';
-  case 'routing':
-    return 'Route Planner';
+  case 'books':
+    return 'Books';
+  case 'games':
+    return 'Video Games';
   // ...
 }
 ```

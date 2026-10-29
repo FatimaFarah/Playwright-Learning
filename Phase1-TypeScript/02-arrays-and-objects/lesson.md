@@ -3,18 +3,18 @@
 ## Arrays: lists of things
 
 ```ts
-const products = ['Diesel', 'Kerosene', 'AdBlue'];
+const products = ['Backpack', 'Bike Light', 'T-Shirt'];
 
-products[0]; // 'Diesel' (counting starts at 0)
+products[0]; // 'Backpack' (counting starts at 0)
 products.length; // 3
-products[products.length - 1]; // 'AdBlue' (the last item)
-products.includes('Kerosene'); // true
+products[products.length - 1]; // 'T-Shirt' (the last item)
+products.includes('Bike Light'); // true
 ```
 
 To make a **new** array with an extra item, use the spread operator `...`:
 
 ```ts
-const more = [...products, 'Gas Oil']; // products itself is unchanged
+const more = [...products, 'Jacket']; // products itself is unchanged
 ```
 
 Prefer this over `products.push(...)`, which **changes** the original array. Changing data that other code shares is a common source of confusing bugs, and in tests it can make one test affect another.
@@ -22,9 +22,9 @@ Prefer this over `products.push(...)`, which **changes** the original array. Cha
 ## Objects: named values grouped together
 
 ```ts
-const order = { id: 12, customer: 'Acme', litres: 500, paid: false };
+const order = { id: 12, customer: 'Sam Jones', items: 2, paid: false };
 
-order.customer; // 'Acme'
+order.customer; // 'Sam Jones'
 const updated = { ...order, paid: true }; // copy with one field changed
 ```
 
@@ -60,7 +60,7 @@ orders.find((o) => o.id === 13); // the first match, or undefined if nothing mat
 const { username, password } = testUser;
 const rows = await page.getByRole('row').all();
 const names = await page.getByRole('cell').allTextContents(); // an array of strings
-expect(names).toContain('Acme');
+expect(names).toContain('Sam Jones');
 ```
 
 ## Now do the exercises

@@ -2,7 +2,7 @@
 // Run: npx playwright test 06
 
 // 1. A Customer has a readonly `name` and `email`, set in the constructor,
-//    and a label() method returning e.g. 'Acme <orders@acme.test>'.
+//    and a label() method returning e.g. 'Sam Jones <sam@example.com>'.
 export class Customer {
   constructor(name: string, email: string) {
     throw new Error('TODO: write the Customer class');

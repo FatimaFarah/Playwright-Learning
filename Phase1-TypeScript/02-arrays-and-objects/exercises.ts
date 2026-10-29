@@ -2,9 +2,9 @@
 // Run: npx playwright test 02
 
 // Given — don't change this. It describes what an order looks like (see topic 04).
-export type Order = { id: number; customer: string; litres: number; paid: boolean };
+export type Order = { id: number; customer: string; items: number; paid: boolean };
 
-// 1. Return the last product in the list, e.g. ['Diesel', 'AdBlue'] -> 'AdBlue'.
+// 1. Return the last product in the list, e.g. ['Backpack', 'T-Shirt'] -> 'T-Shirt'.
 export function lastProduct(products: string[]): string {
   throw new Error('TODO: write lastProduct');
 }
@@ -29,9 +29,9 @@ export function findOrder(orders: Order[], id: number): Order | undefined {
   throw new Error('TODO: write findOrder');
 }
 
-// 6. Add up the litres of all the orders. Hint: a for...of loop and a `let` total.
-export function totalLitres(orders: Order[]): number {
-  throw new Error('TODO: write totalLitres');
+// 6. Add up the items in all the orders. Hint: a for...of loop and a `let` total.
+export function totalItems(orders: Order[]): number {
+  throw new Error('TODO: write totalItems');
 }
 
 // 7. Return a COPY of the order with paid set to true. Don't change the original.
@@ -39,7 +39,7 @@ export function markPaid(order: Order): Order {
   throw new Error('TODO: write markPaid');
 }
 
-// 8. Describe an order, e.g. 'Order 12 for Acme: 500 litres'. Try destructuring the order.
+// 8. Describe an order, e.g. 'Order 12 for Sam Jones: 2 items'. Try destructuring the order.
 export function describeOrder(order: Order): string {
   throw new Error('TODO: write describeOrder');
 }

@@ -7,22 +7,22 @@ export function fullName(first: string, last: string): string {
   throw new Error('TODO: write fullName');
 }
 
-// 2. Build an order page URL, e.g. ('https://dev.example.com', 42) -> 'https://dev.example.com/orders/42'.
+// 2. Build an order page URL, e.g. ('https://shop.example.com', 42) -> 'https://shop.example.com/orders/42'.
 export function orderUrl(baseUrl: string, orderId: number): string {
   throw new Error('TODO: write orderUrl');
 }
 
-// 3. An order is "large" when it is 5000 litres or more.
-export function isLargeOrder(litres: number): boolean {
-  throw new Error('TODO: write isLargeOrder');
+// 3. An order is a "bulk" order when it has 50 or more items.
+export function isBulkOrder(quantity: number): boolean {
+  throw new Error('TODO: write isBulkOrder');
 }
 
-// 4. Return a label for a delivery:
-//    0 litres            -> 'Nothing to deliver'
-//    less than 1000      -> 'Small delivery'
-//    1000 or more        -> 'Bulk delivery'
-export function deliveryLabel(litres: number): string {
-  throw new Error('TODO: write deliveryLabel');
+// 4. Return a label for a parcel:
+//    0 items             -> 'Nothing to ship'
+//    fewer than 5        -> 'Small parcel'
+//    5 or more           -> 'Large parcel'
+export function parcelLabel(items: number): string {
+  throw new Error('TODO: write parcelLabel');
 }
 
 // 5. Turn a price in pence into pounds text, e.g. 1250 -> '£12.50', 99 -> '£0.99'.

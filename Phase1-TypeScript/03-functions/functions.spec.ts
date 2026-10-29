@@ -19,8 +19,8 @@ test.describe('03 Functions', () => {
   });
 
   test('4. countMatching counts the matches', () => {
-    expect(countMatching(['Diesel', 'AdBlue', 'Gas Oil'], (p) => p.includes(' '))).toBe(1);
-    expect(countMatching(['Diesel', 'AdBlue'], (p) => p.length > 0)).toBe(2);
+    expect(countMatching(['Backpack', 'T-Shirt', 'Bike Light'], (p) => p.includes(' '))).toBe(1);
+    expect(countMatching(['Backpack', 'T-Shirt'], (p) => p.length > 0)).toBe(2);
     expect(countMatching([], () => true)).toBe(0);
   });
 

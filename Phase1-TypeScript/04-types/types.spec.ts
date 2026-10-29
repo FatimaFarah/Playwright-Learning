@@ -5,7 +5,7 @@ import {
   type DeliveryStatus,
   welcomeMessage,
   productName,
-  parseLitres,
+  parseQuantity,
   nextStatus,
 } from './exercises';
 
@@ -17,17 +17,17 @@ test.describe('04 Types', () => {
     expect(welcomeMessage(withoutName)).toBe('Welcome, qa2@example.com');
   });
 
-  test('2. productName gives each product its display name', () => {
-    expect(productName('ordering')).toBe('Online Ordering');
-    expect(productName('routing')).toBe('Route Planner');
-    expect(productName('reporting')).toBe('Reports');
+  test('2. productName gives each shop section its display name', () => {
+    expect(productName('books')).toBe('Books');
+    expect(productName('games')).toBe('Video Games');
+    expect(productName('music')).toBe('Music');
   });
 
-  test('3. parseLitres reads numbers and rejects everything else', () => {
-    expect(parseLitres('500')).toBe(500);
-    expect(parseLitres('12.5')).toBe(12.5);
-    expect(parseLitres('abc')).toBeUndefined();
-    expect(parseLitres('')).toBeUndefined();
+  test('3. parseQuantity reads numbers and rejects everything else', () => {
+    expect(parseQuantity('500')).toBe(500);
+    expect(parseQuantity('12')).toBe(12);
+    expect(parseQuantity('abc')).toBeUndefined();
+    expect(parseQuantity('')).toBeUndefined();
   });
 
   test('4. nextStatus moves a delivery along', () => {

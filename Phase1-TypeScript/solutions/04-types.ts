@@ -10,25 +10,25 @@ export function welcomeMessage(user: TestUser): string {
   return `Welcome, ${user.displayName ?? user.username}`;
 }
 
-export type Product = 'ordering' | 'routing' | 'reporting';
+export type Product = 'books' | 'games' | 'music';
 
 export function productName(product: Product): string {
   switch (product) {
-    case 'ordering':
-      return 'Online Ordering';
-    case 'routing':
-      return 'Route Planner';
-    case 'reporting':
-      return 'Reports';
+    case 'books':
+      return 'Books';
+    case 'games':
+      return 'Video Games';
+    case 'music':
+      return 'Music';
   }
 }
 
-export function parseLitres(input: string): number | undefined {
+export function parseQuantity(input: string): number | undefined {
   if (input === '') {
     return undefined;
   }
-  const litres = Number(input);
-  return Number.isNaN(litres) ? undefined : litres;
+  const quantity = Number(input);
+  return Number.isNaN(quantity) ? undefined : quantity;
 }
 
 export type DeliveryStatus = 'pending' | 'out-for-delivery' | 'delivered';

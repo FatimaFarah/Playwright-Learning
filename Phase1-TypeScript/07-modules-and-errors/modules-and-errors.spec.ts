@@ -25,7 +25,7 @@ test.describe('07 Modules and errors', () => {
   });
 
   test('3. safeParseJson parses good JSON and returns undefined for bad JSON', () => {
-    expect(safeParseJson('{"litres": 500}')).toEqual({ litres: 500 });
+    expect(safeParseJson('{"items": 3}')).toEqual({ items: 3 });
     expect(safeParseJson('[1, 2]')).toEqual([1, 2]);
     expect(safeParseJson('not json')).toBeUndefined();
   });

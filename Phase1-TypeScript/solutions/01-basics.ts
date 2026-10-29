@@ -8,17 +8,17 @@ export function orderUrl(baseUrl: string, orderId: number): string {
   return `${baseUrl}/orders/${orderId}`;
 }
 
-export function isLargeOrder(litres: number): boolean {
-  return litres >= 5000;
+export function isBulkOrder(quantity: number): boolean {
+  return quantity >= 50;
 }
 
-export function deliveryLabel(litres: number): string {
-  if (litres === 0) {
-    return 'Nothing to deliver';
-  } else if (litres < 1000) {
-    return 'Small delivery';
+export function parcelLabel(items: number): string {
+  if (items === 0) {
+    return 'Nothing to ship';
+  } else if (items < 5) {
+    return 'Small parcel';
   }
-  return 'Bulk delivery';
+  return 'Large parcel';
 }
 
 export function formatPrice(pence: number): string {

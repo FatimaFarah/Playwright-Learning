@@ -3,8 +3,8 @@ import { test, expect } from '@playwright/test';
 import {
   fullName,
   orderUrl,
-  isLargeOrder,
-  deliveryLabel,
+  isBulkOrder,
+  parcelLabel,
   formatPrice,
   normaliseEmail,
 } from './exercises';
@@ -16,21 +16,21 @@ test.describe('01 Basics', () => {
   });
 
   test('2. orderUrl builds the order page URL', () => {
-    expect(orderUrl('https://dev.example.com', 42)).toBe('https://dev.example.com/orders/42');
+    expect(orderUrl('https://shop.example.com', 42)).toBe('https://shop.example.com/orders/42');
     expect(orderUrl('https://test.example.com', 7)).toBe('https://test.example.com/orders/7');
   });
 
-  test('3. isLargeOrder is true from 5000 litres', () => {
-    expect(isLargeOrder(4999)).toBe(false);
-    expect(isLargeOrder(5000)).toBe(true);
-    expect(isLargeOrder(12000)).toBe(true);
+  test('3. isBulkOrder is true from 50 items', () => {
+    expect(isBulkOrder(49)).toBe(false);
+    expect(isBulkOrder(50)).toBe(true);
+    expect(isBulkOrder(120)).toBe(true);
   });
 
-  test('4. deliveryLabel picks the right label', () => {
-    expect(deliveryLabel(0)).toBe('Nothing to deliver');
-    expect(deliveryLabel(500)).toBe('Small delivery');
-    expect(deliveryLabel(999)).toBe('Small delivery');
-    expect(deliveryLabel(1000)).toBe('Bulk delivery');
+  test('4. parcelLabel picks the right label', () => {
+    expect(parcelLabel(0)).toBe('Nothing to ship');
+    expect(parcelLabel(1)).toBe('Small parcel');
+    expect(parcelLabel(4)).toBe('Small parcel');
+    expect(parcelLabel(5)).toBe('Large parcel');
   });
 
   test('5. formatPrice shows pence as pounds', () => {

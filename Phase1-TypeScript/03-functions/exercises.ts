@@ -19,7 +19,7 @@ export function applyToAll(values: number[], fn: (n: number) => number): number[
 }
 
 // 4. Count how many items `matches` returns true for.
-//    (['Diesel', 'AdBlue', 'Gas Oil'], (p) => p.includes(' ')) -> 1
+//    (['Backpack', 'T-Shirt', 'Bike Light'], (p) => p.includes(' ')) -> 1
 export function countMatching(items: string[], matches: (item: string) => boolean): number {
   throw new Error('TODO: write countMatching');
 }

@@ -9,7 +9,7 @@ export function wait(ms: number): Promise<void> {
 
 export async function loadCustomerName(): Promise<string> {
   await wait(20);
-  return 'Acme Fuels';
+  return 'Sam Jones';
 }
 
 export async function loadOrderCount(): Promise<number> {
@@ -35,7 +35,7 @@ export class FakeBasket {
 
 // ---- Exercises ----
 
-// 1. Load the customer name and return it in capitals, e.g. 'ACME FUELS'.
+// 1. Load the customer name and return it in capitals, e.g. 'SAM JONES'.
 export async function shoutCustomerName(): Promise<string> {
   throw new Error('TODO: write shoutCustomerName');
 }
@@ -56,7 +56,7 @@ export async function placeOrder(basket: FakeBasket): Promise<string> {
 }
 
 // 4. Load the customer name and the order count AT THE SAME TIME, and return
-//    e.g. 'Acme Fuels has 3 orders'. Hint: Promise.all
+//    e.g. 'Sam Jones has 3 orders'. Hint: Promise.all
 export async function customerSummary(): Promise<string> {
   throw new Error('TODO: write customerSummary');
 }

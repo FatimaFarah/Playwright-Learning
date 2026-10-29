@@ -4,10 +4,10 @@ import { Customer, Basket, FakePage, LoginPage } from './exercises';
 
 test.describe('06 Classes', () => {
   test('1. Customer stores its details and labels itself', () => {
-    const acme = new Customer('Acme', 'orders@acme.test');
-    expect(acme.name).toBe('Acme');
-    expect(acme.email).toBe('orders@acme.test');
-    expect(acme.label()).toBe('Acme <orders@acme.test>');
+    const sam = new Customer('Sam Jones', 'sam@example.com');
+    expect(sam.name).toBe('Sam Jones');
+    expect(sam.email).toBe('sam@example.com');
+    expect(sam.label()).toBe('Sam Jones <sam@example.com>');
   });
 
   test('2. Basket starts empty', () => {
@@ -18,8 +18,8 @@ test.describe('06 Classes', () => {
 
   test('2. Basket counts the total quantity', () => {
     const basket = new Basket();
-    basket.add('Diesel', 2);
-    basket.add('AdBlue', 3);
+    basket.add('Backpack', 2);
+    basket.add('T-Shirt', 3);
     expect(basket.isEmpty()).toBe(false);
     expect(basket.count).toBe(5);
   });

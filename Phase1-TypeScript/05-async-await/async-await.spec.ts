@@ -11,13 +11,13 @@ import {
 
 test.describe('05 async and await', () => {
   test('1. shoutCustomerName returns the name in capitals', async () => {
-    expect(await shoutCustomerName()).toBe('ACME FUELS');
+    expect(await shoutCustomerName()).toBe('SAM JONES');
   });
 
   test('2. addTwoItems adds both items in order', async () => {
     const basket = new FakeBasket();
-    await addTwoItems(basket, 'Diesel', 'AdBlue');
-    expect(basket.items).toEqual(['Diesel', 'AdBlue']);
+    await addTwoItems(basket, 'Backpack', 'T-Shirt');
+    expect(basket.items).toEqual(['Backpack', 'T-Shirt']);
   });
 
   test('3. placeOrder waits for the submit to finish', async () => {
@@ -26,12 +26,12 @@ test.describe('05 async and await', () => {
   });
 
   test('4. customerSummary combines both results', async () => {
-    expect(await customerSummary()).toBe('Acme Fuels has 3 orders');
+    expect(await customerSummary()).toBe('Sam Jones has 3 orders');
   });
 
   test('5. addAllItems has added everything, in order, when it returns', async () => {
     const basket = new FakeBasket();
-    await addAllItems(basket, ['Diesel', 'Kerosene', 'AdBlue']);
-    expect(basket.items).toEqual(['Diesel', 'Kerosene', 'AdBlue']);
+    await addAllItems(basket, ['Backpack', 'Bike Light', 'T-Shirt']);
+    expect(basket.items).toEqual(['Backpack', 'Bike Light', 'T-Shirt']);
   });
 });
