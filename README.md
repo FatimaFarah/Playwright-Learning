@@ -35,10 +35,12 @@ There are seven topics, each in its own folder under [Phase1-TypeScript/](Phase1
 | 06  | [Classes](Phase1-TypeScript/06-classes/lesson.md)                       | Page objects are classes                             |
 | 07  | [Modules and errors](Phase1-TypeScript/07-modules-and-errors/lesson.md) | Imports, config, secrets in `.env`                   |
 
+**How you're checked:** each exercise is a function, and your job is to make it `return` the right answer. You don't print the answer, and you don't write tests. The tests are already written, in the `.spec.ts` file next to each exercise. They call your function and check what comes back. Topic 01's lesson walks through this in detail, so start there.
+
 For each topic:
 
-1. **Read** `lesson.md`.
-2. **Open** `exercises.ts` and write your code wherever it says `// TODO: write your code here`.
+1. **Read** `lesson.md`. It ends with an exercise guide saying which part of the lesson each exercise needs.
+2. **Open** `exercises.ts` and write your code wherever it says `// TODO: write your code here`, making sure each function `return`s its answer.
 3. **Run** that topic's tests, for example `npx playwright test 01`, until they're all green. You can also click the ▶ buttons in VS Code's **Testing** panel (the flask icon).
 4. **Run** `npm run typecheck`. Topic 04 onwards has some checks that only typecheck catches.
 5. **Compare** your answers with [Phase1-TypeScript/solutions/](Phase1-TypeScript/solutions/). There's usually more than one right answer, so if yours works and reads clearly, it's fine.
